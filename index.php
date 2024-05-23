@@ -1,7 +1,9 @@
 <?php include "includes/navbar.php"; ?>
 <?php include "functions/db_connect.php" ?>
+<?php include "functions/filter.php" ?>
 
 <?php
+// PREALABLE AFFICHER LES ELEMENTS POUR LE FORMULAIRE
 // Afficher les prêtres
 $pretres = $pdo->prepare("SELECT * FROM pretre");
 $pretres->execute();
@@ -11,8 +13,6 @@ $results_pretres = $pretres->fetchAll();
 $cite = $pdo->prepare("SELECT * FROM cite");
 $cite->execute();
 $results_cite = $cite->fetchAll();
-
-// Afficher les
 ?>  
 
 <!-- Code de la page de recherche -->
@@ -70,7 +70,7 @@ $results_cite = $cite->fetchAll();
         <!-- Recherche dans toute la base de données -->
         <div class="search-all">
             <label for="search-all">Recherche générale</label>
-            <input type="text" id="search" name="search-box" placeholder="Rechercher sur tout le site...">
+            <input type="text" id="search" name="search-box" placeholder="Rechercher sur toute la base de données...">
         </div>
         
         <br /><br />
@@ -82,34 +82,9 @@ $results_cite = $cite->fetchAll();
 <div class="result-content">
     <!-- Affichage dynamique -->
     <?php
-    // Initialiser la requête SQL
-    $sql = "SELECT * FROM pretre";
-    $params = [];
-
-    // Vérifier si 'cite' est défini et n'est pas 'all_cite'
-    if (isset($_GET["cite"]) && $_GET["cite"] != "all_cite") {
-        $sql .= " WHERE nom_cite = :cite";
-        $params[':cite'] = $_GET['cite'];
-    }
-
-    // Vérifier si 'pretrise' est défini et n'est pas 'all_pretres'
-    if (isset($_GET["pretrise"]) && $_GET["pretrise"] != "all_pretres") {
-        // Si 'cite' a déjà été ajouté à la requête, nous devons utiliser AND, sinon WHERE
-        if (isset($_GET["cite"]) && $_GET["cite"] != "all_cite") {
-            $sql .= " AND nom_pretrise = :pretre";
-        } else {
-            $sql .= " WHERE nom_pretrise = :pretre";
-        }
-        $params[':pretre'] = $_GET['pretrise'];
-    }
-
-    // Préparer et exécuter la requête
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute($params);
-
-    // Récupérer et afficher les résultats
-    $result = $stmt->fetchAll();
-    var_dump($result);
+    // Appel de fonction
+    $results = executeSearch($pdo);
+    var_dump($results);
     ?>
 </div>
 
