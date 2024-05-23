@@ -1,7 +1,7 @@
 <?php
-$servername = "db"; 
-$username = "root";
-$password = "root_password";
+$servername = "localhost:3306"; 
+$username = "root_admin";
+$password = "B75389661a";
 $dbname = "pretres_civiques";
 
 $sql = "mysql:host=$servername;dbname=$dbname;";
