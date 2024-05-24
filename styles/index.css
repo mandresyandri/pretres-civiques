@@ -1,0 +1,38 @@
+body {
+	font-family: "Ubuntu", sans-serif;
+  	font-weight: 300;
+	font-style: normal;
+}
+
+h1{
+	font-size: 50px;
+	font-family: "Lora", serif;
+	font-optical-sizing: auto;
+	
+}
+
+h2 {
+	font-family: "Lora", serif;
+	font-optical-sizing: auto;
+
+}
+
+.bandeau {
+	background-color: #EDEDED;
+	height: 400px;
+	font-family: "Lora", serif;
+	font-optical-sizing: auto;
+}
+
+input[type="submit"] {
+	background-color: #EDAB33;
+	height: 57px;
+	width: 126px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    border-radius: 30px;
+    border: none;
+}
+
+
