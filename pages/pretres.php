@@ -86,11 +86,11 @@ navbar{
 
 		<div class="reperes">
 			<div class="caracteristiques">
-				<img src="datation.png" alt="Photo de calendrier"/><span>  <strong>Datation :</strong> <?php echo $results[0]["nom_datation"];?></span>
+				<img src="calendrier.svg" alt="Photo de calendrier" width="16px"/><span>  <strong>Datation :</strong> <?php echo $results[0]["nom_datation"];?></span>
 			</div>
 
 			<div class="caracteristiques">
-				<img src="pretrise.png" alt="Photo de laurier"/><span>  
+				<img src="laurier.svg" alt="Photo de laurier" width="16px"/><span>  
 					<strong>Prêtrise :</strong></span> 
 					<!-- SOLUTION TEMPORAIR >>> NE PAS REFAIRE DES PAGES INUTILEMENT -->
 					<a class="lien" href="../?cite=all_cite&pretrise=<?php echo $results[0]["nom_pretrise"];?>&date_debut=&date_fin=&search-box=">
@@ -99,7 +99,7 @@ navbar{
 			</div>
 
 			<div class="caracteristiques">
-				<img src="temple.png" alt="Photo de temple"/><span>  
+				<img src="temple.svg" alt="Photo de temple" width="16px"/><span>  
 					<strong>Cité :</strong></span> 
 					<a class="lien" href="../?cite=<?php echo $results[0]["pretre_nom_cite"];?>&pretrise=all_pretres&date_debut=&date_fin=&search-box=">
 						<?php echo $results[0]["cite_nom_cite"];?>
