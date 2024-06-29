@@ -1,38 +1,179 @@
 body {
-	font-family: "Ubuntu", sans-serif;
-  	font-weight: 300;
-	font-style: normal;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-	font-size: 50px;
-	font-family: "Lora", serif;
-	font-optical-sizing: auto;
-	
+h1 {
+    font-size: 50px;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+}
+
+.search-title {
+	padding-left: 5rem;
 }
 
 h2 {
-	font-family: "Lora", serif;
-	font-optical-sizing: auto;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+}
 
+.search-content {
+    background-color: #EDEDED;
+    height: fit-content;
+	padding: 2rem 0 2rem 0;
+    width: 100%;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
 }
 
 .bandeau {
-	background-color: #EDEDED;
-	height: 400px;
-	font-family: "Lora", serif;
-	font-optical-sizing: auto;
+    width: 100%;
 }
 
-input[type="submit"] {
-	background-color: #EDAB33;
-	height: 57px;
-	width: 126px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#exportBtn {
+	margin-left: 5rem;
+}
+
+input[type="submit"],
+#exportBtn {
+    background-color: #EDAB33;
+    height: 50px; 
+    width: 126px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-top: 2.7rem;
     border-radius: 30px;
     border: none;
 }
 
+.first-row {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6rem 3rem 6rem;
+}
 
+.cite,
+.pretrise {
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+    font-weight: bold;
+}
+
+.cite > select,
+.pretrise > select {
+    padding: 0.9rem 0.9rem;
+    border-radius: 3rem;
+    width: 37rem;
+}
+
+.second-row {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 6rem 3rem 6rem;
+}
+
+.date-inputs {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-inputs > input {
+    padding: 0.9rem 0.9rem;
+    border-radius: 3rem;
+    width: 15rem;
+    border: none;
+}
+
+.general-search {
+    width: 80%;
+    display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+	padding: 0rem 6rem 3rem 6rem;
+}
+
+.elements-search {
+	display: flex;
+	justify-content: space-between;
+}
+
+.general-search > .elements-search > .search-and-input > input[type="text"] {
+    padding: 0.9rem 0.9rem;
+    border-radius: 3rem;
+    width: 65rem;
+    border: none;
+}
+
+.search-and-input {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.result-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajustez la taille min/max selon le besoin */
+    gap: 1rem; /* Espacement entre les éléments */
+    padding-left: 5rem;
+    padding-right: 5rem;
+	padding-top: 3rem;
+    justify-content: center; /* Centrer les éléments dans le conteneur */
+
+}
+
+/* affichage des résultats */
+.div-answers {
+    width: 200px;
+    padding: 15px;
+    background-color: #F3F8FA;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.div-answers h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.some-class {
+    margin-bottom: 8px;
+}
+
+.some-class strong {
+    display: inline-block;
+    width: 120px;
+    color: #555;
+}
+
+.div-answers a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #FFB300;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    /* position: absolute; */
+    /* top: 15px;
+    right: 15px; */
+    transition: background-color 0.3s;
+}
+
+.div-answers a:hover {
+    background-color: #E69A00;
+}
