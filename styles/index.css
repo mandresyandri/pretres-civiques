@@ -73,6 +73,7 @@ input[type="submit"],
     padding: 0.9rem 0.9rem;
     border-radius: 3rem;
     width: 37rem;
+    border: none;
 }
 
 .second-row {
