@@ -18,7 +18,7 @@
         <span id="titre1" onclick="window.location.href = 'https://pretres-civiques.mastercmw.com/';" style="cursor: pointer;">Prêtres civiques</span> 
         <span id="soustitre" onclick="window.location.href = 'https://pretres-civiques.mastercmw.com/';" style="cursor: pointer;">Les prêtres du culte impérial romain dans les cités de la province d'Asie</span> </div>
             <ul class="navbar">
-                <li><a href="../index.php">Recherche</a></li>
+                <li><a href="https://recherches.pretres-civiques.mastercmw.com/index.php">Recherche</a></li>
                 <li><a href="https://pretres-civiques.mastercmw.com/cites/">Cités</a></li> 
                 <li> <a href="http://pretres-civiques.mastercmw.com/contact/">Contact</a></li> 
                 <li> <a href="http://pretres-civiques.mastercmw.com/abreviations/">Abréviations</a></li> 
