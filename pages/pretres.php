@@ -71,7 +71,7 @@ navbar{
     $page_id = $_GET["id"];
 
     // afficher les datas > base id 
-    $sql = "SELECT * FROM pretres_civiques_obt WHERE id_pretre = :pretre";
+    $sql = "SELECT * FROM true_pretres_civiques___pretres_civiques_obt_240712 WHERE id_pretre = :pretre";
     $params[':pretre'] = $page_id;
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
@@ -109,7 +109,7 @@ navbar{
 			<div class="contenu">
 				<p><strong>Présentation :</strong> <?php echo $results[0]["presentation_p"];?></p>
 				<p><strong>Notes :</strong> <?php echo $results[0]["commentaires_p"];?></p>
-				<span><strong>Source(s) :</strong>  </span><a class="lien" href="pages/sources.php/?id_source"> <?php echo $results[0]["contenu_traduit"];?> </a>
+				<span><strong>Source(s) :</strong>  </span><a class="lien" href="sources.php/?id_source=<?php echo $results[0]["id_source"] ;?>"> <?php echo $results[0]["contenu_traduit"];?> </a>
 				<p><strong>Bibliographie :</strong> <?php echo $results[0]["nom_source"];?></p>
 			</div>	
 

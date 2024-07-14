@@ -10,7 +10,7 @@
     <title><?php echo "Chercher un prêtre"?></title>
 </head>
 <body>
-<navbar class="main-navbar">
+    <navbar class="main-navbar">
         <div><img src="https://pretres-civiques.mastercmw.com/wp-content/uploads/2023/06/logo-site.png" 
             alt="logo" height="80px" weight="80px"
             onclick="window.location.href = 'https://pretres-civiques.mastercmw.com/';" style="cursor: pointer;"> </div>

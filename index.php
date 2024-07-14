@@ -5,12 +5,12 @@
 <?php
 // PREALABLE AFFICHER LES ELEMENTS POUR LE FORMULAIRE
 // Afficher les prêtres
-$pretres = $pdo->prepare("SELECT * FROM pretre");
+$pretres = $pdo->prepare("SELECT * FROM true_pretres_civiques___pretres_civiques_obt_240712");
 $pretres->execute();
 $results_pretres = $pretres->fetchAll();
 
 // afficher les cites
-$cite = $pdo->prepare("SELECT * FROM cite");
+$cite = $pdo->prepare("SELECT * FROM true_pretres_civiques___pretres_civiques_obt_240712");
 $cite->execute();
 $results_cite = $cite->fetchAll();
 ?>  
@@ -32,7 +32,7 @@ $results_cite = $cite->fetchAll();
                          $unique_cites = array();
          
                          foreach ($results_cite as $cite) {
-                             $unique_cites[$cite["nom_cite"]] = $cite["id_cite"];
+                             $unique_cites[$cite["cite_nom_cite"]] = $cite["pretre_nom_cite"];
                          }
          
                          foreach ($unique_cites as $nom_cite => $id_cite) {

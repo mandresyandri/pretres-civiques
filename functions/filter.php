@@ -4,7 +4,7 @@ function executeSearch($pdo) {
         // Base de la requête SQL
         // Si empty search-box
         if (empty($_GET["search-box"])) {
-            $sql = "SELECT * FROM pretres_civiques_obt WHERE 1=1";
+            $sql = "SELECT * FROM true_pretres_civiques___pretres_civiques_obt_240712 WHERE 1=1";
             $params = [];
         
             // "cite" filter
@@ -36,7 +36,7 @@ function executeSearch($pdo) {
         
         // Si search-box n'est pas empty
         else {
-            $sql = "SELECT * FROM pretres_civiques_obt 
+            $sql = "SELECT * FROM true_pretres_civiques___pretres_civiques_obt_240712 
             WHERE (
                 nom_grec LIKE :search 
                 OR nom_traduit LIKE :search 
